@@ -1,0 +1,11 @@
+/home/renars/Documents/habit/HabitManager.Domain/bin/Debug/net10.0/HabitManager.Domain.deps.json
+/home/renars/Documents/habit/HabitManager.Domain/bin/Debug/net10.0/HabitManager.Domain.dll
+/home/renars/Documents/habit/HabitManager.Domain/bin/Debug/net10.0/HabitManager.Domain.pdb
+/home/renars/Documents/habit/HabitManager.Domain/obj/Debug/net10.0/HabitManager.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/renars/Documents/habit/HabitManager.Domain/obj/Debug/net10.0/HabitManager.Domain.AssemblyInfoInputs.cache
+/home/renars/Documents/habit/HabitManager.Domain/obj/Debug/net10.0/HabitManager.Domain.AssemblyInfo.cs
+/home/renars/Documents/habit/HabitManager.Domain/obj/Debug/net10.0/HabitManager.Domain.csproj.CoreCompileInputs.cache
+/home/renars/Documents/habit/HabitManager.Domain/obj/Debug/net10.0/HabitManager.Domain.dll
+/home/renars/Documents/habit/HabitManager.Domain/obj/Debug/net10.0/refint/HabitManager.Domain.dll
+/home/renars/Documents/habit/HabitManager.Domain/obj/Debug/net10.0/HabitManager.Domain.pdb
+/home/renars/Documents/habit/HabitManager.Domain/obj/Debug/net10.0/ref/HabitManager.Domain.dll

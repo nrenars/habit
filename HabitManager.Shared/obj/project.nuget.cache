@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "GmoDKcymyeU=",
+  "success": true,
+  "projectFilePath": "/home/renars/Documents/habit/HabitManager.Shared/HabitManager.Shared.csproj",
+  "expectedPackageFiles": [
+    "/home/renars/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.10/microsoft.aspnetcore.app.ref.10.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="HabitManager.Console/HabitManager.Console.csproj" />
+  <Project Path="HabitManager.Domain/HabitManager.Domain.csproj" />
+  <Project Path="HabitManager.Shared/HabitManager.Shared.csproj" />
+</Solution>

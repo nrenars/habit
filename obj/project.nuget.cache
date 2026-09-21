@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "CfK4uMPJ6j4=",
+  "success": true,
+  "projectFilePath": "/home/renars/Documents/habit/habit.csproj",
+  "expectedPackageFiles": [
+    "/home/renars/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.10/microsoft.aspnetcore.app.ref.10.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}
