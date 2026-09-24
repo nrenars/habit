@@ -12,3 +12,11 @@
 /home/renars/Documents/habit/obj/Debug/net10.0/habit.pdb
 /home/renars/Documents/habit/obj/Debug/net10.0/habit.genruntimeconfig.cache
 /home/renars/Documents/habit/obj/Debug/net10.0/ref/habit.dll
+/Users/renarsneimanis/Documents/prog/habit/obj/Debug/net10.0/habit.GeneratedMSBuildEditorConfig.editorconfig
+/Users/renarsneimanis/Documents/prog/habit/obj/Debug/net10.0/habit.AssemblyInfoInputs.cache
+/Users/renarsneimanis/Documents/prog/habit/obj/Debug/net10.0/habit.AssemblyInfo.cs
+/Users/renarsneimanis/Documents/prog/habit/obj/Debug/net10.0/habit.csproj.CoreCompileInputs.cache
+/Users/renarsneimanis/Documents/prog/habit/obj/Debug/net10.0/habit.sourcelink.json
+/Users/renarsneimanis/Documents/prog/habit/obj/Debug/net10.0/habit.dll
+/Users/renarsneimanis/Documents/prog/habit/obj/Debug/net10.0/refint/habit.dll
+/Users/renarsneimanis/Documents/prog/habit/obj/Debug/net10.0/habit.pdb

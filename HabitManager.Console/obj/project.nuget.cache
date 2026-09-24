@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Dk1bUf0+sws=",
+  "dgSpecHash": "8wqCJw39cFg=",
   "success": true,
-  "projectFilePath": "/home/renars/Documents/habit/HabitManager.Console/HabitManager.Console.csproj",
-  "expectedPackageFiles": [
-    "/home/renars/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.10/microsoft.aspnetcore.app.ref.10.0.10.nupkg.sha512"
-  ],
+  "projectFilePath": "/Users/renarsneimanis/Documents/prog/habit/HabitManager.Console/HabitManager.Console.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

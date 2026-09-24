@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "targets": {
     "net10.0": {
       "HabitManager.Domain/1.0.0": {
@@ -43,35 +43,37 @@
     ]
   },
   "packageFolders": {
-    "/home/renars/.nuget/packages/": {}
+    "/Users/renarsneimanis/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/renars/Documents/habit/HabitManager.Console/HabitManager.Console.csproj",
+      "projectUniqueName": "/Users/renarsneimanis/Documents/prog/habit/HabitManager.Console/HabitManager.Console.csproj",
       "projectName": "HabitManager.Console",
-      "projectPath": "/home/renars/Documents/habit/HabitManager.Console/HabitManager.Console.csproj",
-      "packagesPath": "/home/renars/.nuget/packages/",
-      "outputPath": "/home/renars/Documents/habit/HabitManager.Console/obj/",
+      "projectPath": "/Users/renarsneimanis/Documents/prog/habit/HabitManager.Console/HabitManager.Console.csproj",
+      "packagesPath": "/Users/renarsneimanis/.nuget/packages/",
+      "outputPath": "/Users/renarsneimanis/Documents/prog/habit/HabitManager.Console/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/renars/.nuget/NuGet/NuGet.Config"
+        "/Users/renarsneimanis/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
+        "/opt/homebrew/Cellar/dotnet/10.0.401/libexec/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "/home/renars/Documents/habit/HabitManager.Domain/HabitManager.Domain.csproj": {
-              "projectPath": "/home/renars/Documents/habit/HabitManager.Domain/HabitManager.Domain.csproj"
+            "/Users/renarsneimanis/Documents/prog/habit/HabitManager.Domain/HabitManager.Domain.csproj": {
+              "projectPath": "/Users/renarsneimanis/Documents/prog/habit/HabitManager.Domain/HabitManager.Domain.csproj"
             },
-            "/home/renars/Documents/habit/HabitManager.Shared/HabitManager.Shared.csproj": {
-              "projectPath": "/home/renars/Documents/habit/HabitManager.Shared/HabitManager.Shared.csproj"
+            "/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/HabitManager.Shared.csproj": {
+              "projectPath": "/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/HabitManager.Shared.csproj"
             }
           }
         }
@@ -86,10 +88,11 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "10.0.400"
     },
     "frameworks": {
       "net10.0": {
+        "framework": "net10.0",
         "targetAlias": "net10.0",
         "imports": [
           "net461",
@@ -102,18 +105,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[10.0.10, 10.0.10]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.110/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/10.0.401/libexec/sdk/10.0.401/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

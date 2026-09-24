@@ -9,3 +9,15 @@
 /home/renars/Documents/habit/HabitManager.Shared/obj/Debug/net10.0/refint/HabitManager.Shared.dll
 /home/renars/Documents/habit/HabitManager.Shared/obj/Debug/net10.0/HabitManager.Shared.pdb
 /home/renars/Documents/habit/HabitManager.Shared/obj/Debug/net10.0/ref/HabitManager.Shared.dll
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/bin/Debug/net10.0/HabitManager.Shared.deps.json
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/bin/Debug/net10.0/HabitManager.Shared.dll
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/bin/Debug/net10.0/HabitManager.Shared.pdb
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/obj/Debug/net10.0/HabitManager.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/obj/Debug/net10.0/HabitManager.Shared.AssemblyInfoInputs.cache
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/obj/Debug/net10.0/HabitManager.Shared.AssemblyInfo.cs
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/obj/Debug/net10.0/HabitManager.Shared.csproj.CoreCompileInputs.cache
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/obj/Debug/net10.0/HabitManager.Shared.sourcelink.json
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/obj/Debug/net10.0/HabitManager.Shared.dll
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/obj/Debug/net10.0/refint/HabitManager.Shared.dll
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/obj/Debug/net10.0/HabitManager.Shared.pdb
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/obj/Debug/net10.0/ref/HabitManager.Shared.dll

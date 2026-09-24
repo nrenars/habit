@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HabitManager.Console")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d6610d811ac58f525928b006ff3d59b76903a9a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61085936e067d29de08b4d0a5548241f46235cde")]
 [assembly: System.Reflection.AssemblyProductAttribute("HabitManager.Console")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HabitManager.Console")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
