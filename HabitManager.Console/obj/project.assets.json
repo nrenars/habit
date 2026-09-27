@@ -21,6 +21,19 @@
         "runtime": {
           "bin/placeholder/HabitManager.Shared.dll": {}
         }
+      },
+      "HabitManager.TestData/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "HabitManager.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/HabitManager.TestData.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HabitManager.TestData.dll": {}
+        }
       }
     }
   },
@@ -34,12 +47,18 @@
       "type": "project",
       "path": "../HabitManager.Shared/HabitManager.Shared.csproj",
       "msbuildProject": "../HabitManager.Shared/HabitManager.Shared.csproj"
+    },
+    "HabitManager.TestData/1.0.0": {
+      "type": "project",
+      "path": "../HabitManager.TestData/HabitManager.TestData.csproj",
+      "msbuildProject": "../HabitManager.TestData/HabitManager.TestData.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
       "HabitManager.Domain >= 1.0.0",
-      "HabitManager.Shared >= 1.0.0"
+      "HabitManager.Shared >= 1.0.0",
+      "HabitManager.TestData >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -74,6 +93,9 @@
             },
             "/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/HabitManager.Shared.csproj": {
               "projectPath": "/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/HabitManager.Shared.csproj"
+            },
+            "/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/HabitManager.TestData.csproj": {
+              "projectPath": "/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/HabitManager.TestData.csproj"
             }
           }
         }

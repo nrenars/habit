@@ -1,0 +1,16 @@
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/obj/Debug/net10.0/HabitManager.TestData.GeneratedMSBuildEditorConfig.editorconfig
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/obj/Debug/net10.0/HabitManager.TestData.AssemblyInfoInputs.cache
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/obj/Debug/net10.0/HabitManager.TestData.AssemblyInfo.cs
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/obj/Debug/net10.0/HabitManager.TestData.csproj.CoreCompileInputs.cache
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/obj/Debug/net10.0/HabitManager.TestData.sourcelink.json
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/bin/Debug/net10.0/HabitManager.TestData.deps.json
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/bin/Debug/net10.0/HabitManager.TestData.dll
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/bin/Debug/net10.0/HabitManager.TestData.pdb
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/bin/Debug/net10.0/HabitManager.Domain.dll
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/bin/Debug/net10.0/HabitManager.Domain.pdb
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/obj/Debug/net10.0/HabitManager.TestData.csproj.AssemblyReference.cache
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/obj/Debug/net10.0/HabitMan.A23A5CB5.Up2Date
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/obj/Debug/net10.0/HabitManager.TestData.dll
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/obj/Debug/net10.0/refint/HabitManager.TestData.dll
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/obj/Debug/net10.0/HabitManager.TestData.pdb
+/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/obj/Debug/net10.0/ref/HabitManager.TestData.dll

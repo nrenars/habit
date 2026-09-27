@@ -1,28 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.IO;
 using System.Text.Json;
 using HabitManager;
 
-namespace UzdevumuTestData
+namespace TestData
 {
     public class TestDataFactoryList : ITestDataFactory, ISaveLoad
     {
         private List<Habit> testData;
 
-        private string fileName;
-            public string FileName { get => fileName; set => fileName = value; }
+        private string fileName = "testdata.json";
+        public string FileName { get => fileName; set => fileName = value; }
 
-            public void CreateTestData()
+        public void CreateTestData()
         {
             testData = new List<Habit>();
-            testData.Add(new Habit(1, "Fitness", "Pushups, squats, pull-ups"));
-            testData.Add(new Habit(2, "Studying", "complete homework"));
+
+            var fitness = new Habit("demo-user-1", "Fitness", Frequency.Daily, "Pushups, squats, pull-ups");
+            fitness.MarkCompleted(DateTime.Today);
+            fitness.MarkCompleted(DateTime.Today.AddDays(-1));
+            testData.Add(fitness);
+
+            testData.Add(new Habit("demo-user-1", "Studying", Frequency.Weekly, "Complete homework"));
+
+            var earlyWakeUp = new Habit("demo-user-2", "Early wake-up", Frequency.Daily);
+            earlyWakeUp.Archive();
+            testData.Add(earlyWakeUp);
+
+            var reading = new Habit("demo-user-2", "Reading", Frequency.Monthly, "One book per month");
+            reading.MarkCompleted(DateTime.Today.AddDays(-3));
+            testData.Add(reading);
         }
 
         public string ReturnTestData()
         {
-            string s = "List" + "\n";
+            var s = "List" + "\n";
             foreach (var habit in testData)
             {
                 s += habit.ToString() + "\n";
@@ -37,19 +50,18 @@ namespace UzdevumuTestData
 
         public bool SaveToFile()
         {
-            string jsonString = JsonSerializer.Serialize(testData);
-            File.WriteAllText(FileName, jsonString);
+            var json = JsonSerializer.Serialize(testData);
+            File.WriteAllText(FileName, json);
             return true;
         }
 
         public bool LoadFromFile()
         {
-            if (File.Exists(FileName))
-            {
-                string jsonString = File.ReadAllText(FileName);
-                testData = JsonSerializer.Deserialize<List<Habit>>(jsonString);
+            if (!File.Exists(FileName))
+                return false;
 
-            }
+            var json = File.ReadAllText(FileName);
+            testData = JsonSerializer.Deserialize<List<Habit>>(json) ?? new List<Habit>();
             return true;
         }
     }

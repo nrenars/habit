@@ -10,6 +10,7 @@
   <ItemGroup>
     <ProjectReference Include="..\HabitManager.Domain\HabitManager.Domain.csproj" />
     <ProjectReference Include="..\HabitManager.Shared\HabitManager.Shared.csproj" />
+    <ProjectReference Include="..\HabitManager.TestData\HabitManager.TestData.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,11 +1,30 @@
 {
   "version": 4,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "HabitManager.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/HabitManager.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HabitManager.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "HabitManager.Domain/1.0.0": {
+      "type": "project",
+      "path": "../HabitManager.Domain/HabitManager.Domain.csproj",
+      "msbuildProject": "../HabitManager.Domain/HabitManager.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "HabitManager.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/renarsneimanis/.nuget/packages/": {}
@@ -33,7 +52,11 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/renarsneimanis/Documents/prog/habit/HabitManager.Domain/HabitManager.Domain.csproj": {
+              "projectPath": "/Users/renarsneimanis/Documents/prog/habit/HabitManager.Domain/HabitManager.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -4,8 +4,11 @@ using System.Text;
 
 namespace HabitManager
 {
-    public class RecurringHabit : Habit
+    public enum Frequency 
     {
-	public RecurringFrequencyEnum Frequency { get; set; }
+        Daily,
+        Weekly,
+        Monthly,
+        Yearly
     }
 }
