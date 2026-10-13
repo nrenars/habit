@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HabitManager.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d709b1d1b5d53d85a3d9d702c0088fc040b801f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+964b9338b4915f962fe8d0c3cd69d20dbdcec657")]
 [assembly: System.Reflection.AssemblyProductAttribute("HabitManager.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HabitManager.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
