@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/HabitManager.Shared.csproj": {}
+    "/Users/renarsneimanis/Documents/github/habit/HabitManager.Shared/HabitManager.Shared.csproj": {}
   },
   "projects": {
-    "/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/HabitManager.Shared.csproj": {
+    "/Users/renarsneimanis/Documents/github/habit/HabitManager.Shared/HabitManager.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/HabitManager.Shared.csproj",
+        "projectUniqueName": "/Users/renarsneimanis/Documents/github/habit/HabitManager.Shared/HabitManager.Shared.csproj",
         "projectName": "HabitManager.Shared",
-        "projectPath": "/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/HabitManager.Shared.csproj",
+        "projectPath": "/Users/renarsneimanis/Documents/github/habit/HabitManager.Shared/HabitManager.Shared.csproj",
         "packagesPath": "/Users/renarsneimanis/.nuget/packages/",
-        "outputPath": "/Users/renarsneimanis/Documents/prog/habit/HabitManager.Shared/obj/",
+        "outputPath": "/Users/renarsneimanis/Documents/github/habit/HabitManager.Shared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/renarsneimanis/.nuget/NuGet/NuGet.Config"

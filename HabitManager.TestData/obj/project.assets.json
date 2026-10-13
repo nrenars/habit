@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/HabitManager.TestData.csproj",
+      "projectUniqueName": "/Users/renarsneimanis/Documents/github/habit/HabitManager.TestData/HabitManager.TestData.csproj",
       "projectName": "HabitManager.TestData",
-      "projectPath": "/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/HabitManager.TestData.csproj",
+      "projectPath": "/Users/renarsneimanis/Documents/github/habit/HabitManager.TestData/HabitManager.TestData.csproj",
       "packagesPath": "/Users/renarsneimanis/.nuget/packages/",
-      "outputPath": "/Users/renarsneimanis/Documents/prog/habit/HabitManager.TestData/obj/",
+      "outputPath": "/Users/renarsneimanis/Documents/github/habit/HabitManager.TestData/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/renarsneimanis/.nuget/NuGet/NuGet.Config"
@@ -53,8 +53,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "/Users/renarsneimanis/Documents/prog/habit/HabitManager.Domain/HabitManager.Domain.csproj": {
-              "projectPath": "/Users/renarsneimanis/Documents/prog/habit/HabitManager.Domain/HabitManager.Domain.csproj"
+            "/Users/renarsneimanis/Documents/github/habit/HabitManager.Domain/HabitManager.Domain.csproj": {
+              "projectPath": "/Users/renarsneimanis/Documents/github/habit/HabitManager.Domain/HabitManager.Domain.csproj"
             }
           }
         }

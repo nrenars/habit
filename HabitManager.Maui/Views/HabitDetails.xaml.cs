@@ -1,0 +1,26 @@
+namespace HabitManager.Maui.Views;
+
+[QueryProperty(nameof(Habit), "Habit")]
+public partial class HabitDetails : ContentPage
+{
+    private Habit _habit = null!;
+
+    public Habit Habit
+    {
+        get => _habit;
+        set
+        {
+            _habit = value;
+            BindingContext = value;   // XAML var lietot {Binding Name} u.c.
+        }
+    }
+
+	public HabitDetails(){
+		InitializeComponent();
+	}
+
+	private async void OnEditButtonClicked(object? sender, EventArgs e){
+	    await Shell.Current.GoToAsync(nameof(EditHabit),
+		new Dictionary<string, object> { ["Habit"] = Habit });
+	}
+}

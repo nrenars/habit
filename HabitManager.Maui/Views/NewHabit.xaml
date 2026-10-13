@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HabitManager.Maui.Views.NewHabit"
+             Title="New Habit">
+
+    <VerticalStackLayout>
+                        
+        <Label Text="Name"/>
+        <Entry />
+
+        <Label Text="Note"/>
+        <Entry />
+
+        <Picker x:Name="Frequency"
+                Title="Frequency">
+          <Picker.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+              <x:String>Daily</x:String>
+              <x:String>Weekly</x:String>
+              <x:String>Monthly</x:String>
+            </x:Array>
+          </Picker.ItemsSource>
+        </Picker>
+
+        <Button Grid.Row="0" x:Name="AddNewHabitButton" Text="Add" HorizontalOptions="Center" Clicked="OnAddNewHabitClicked" />
+    </VerticalStackLayout>
+
+</ContentPage>

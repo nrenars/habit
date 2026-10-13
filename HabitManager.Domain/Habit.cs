@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
-namespace HabitManager
-{
-    public class Habit
-    {
+namespace HabitManager{
+
+    public class Habit{
+
         private const int MaxNameLength = 100;
 
         private readonly List<HabitCompletion> _completions = new();
@@ -22,8 +19,12 @@ namespace HabitManager
 
         public IReadOnlyList<HabitCompletion> Completions => _completions.AsReadOnly();
 
-        public Habit(string userId, string name, Frequency frequency, string note = "")
-        {
+        [JsonIgnore]
+        public bool IsActive => Status == HabitStatus.Active;
+
+
+        public Habit(string userId, string name, Frequency frequency, string note = ""){
+
             if (string.IsNullOrWhiteSpace(userId))
                 throw new ArgumentException("UserId nedrīkst būt tukšs.", nameof(userId));
 
@@ -41,8 +42,7 @@ namespace HabitManager
         [JsonConstructor]
         public Habit(Guid id, string userId, string name, string note, HabitStatus status,
                       Frequency habitFrequency, DateTime createdAt, DateTime editedAt,
-                      List<HabitCompletion> completions)
-        {
+                      List<HabitCompletion> completions){
             Id = id;
             UserId = userId;
             Name = name;
@@ -54,43 +54,37 @@ namespace HabitManager
             _completions = completions ?? new List<HabitCompletion>();
         }
 
-        public void SetName(string name)
-        {
+        public void SetName(string name){
             if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentException("Ieraduma nosaukums nedrīkst būt tukšs.");
             if (name.Length > MaxNameLength)
                 throw new ArgumentException($"Nosaukums nedrīkst pārsniegt {MaxNameLength} simbolus.");
 
             Name = name;
-            Touch();
+            UpdateEditedAt();
         }
 
-        public void SetNote(string note)
-        {
+        public void SetNote(string note){
             Note = note ?? "";
-            Touch();
+            UpdateEditedAt();
         }
 
-        public void SetFrequency(Frequency frequency)
-        {
+        public void SetFrequency(Frequency frequency){
             HabitFrequency = frequency;
-            Touch();
+            UpdateEditedAt();
         }
 
-        public void Archive()
-        {
+        public void Archive(){
             Status = HabitStatus.Archived;
-            Touch();
+            UpdateEditedAt();
         }
 
-        public void Restore()
-        {
+        public void Restore(){
             Status = HabitStatus.Active;
-            Touch();
+            UpdateEditedAt();
         }
 
-        public HabitCompletion MarkCompleted(DateTime date)
-        {
+        public HabitCompletion MarkCompleted(DateTime date){
             if (Status == HabitStatus.Archived)
                 throw new InvalidOperationException("Arhivētu ieradumu nevar atzīmēt kā izpildītu.");
 
@@ -107,9 +101,9 @@ namespace HabitManager
 
         public bool IsCompletedToday() => IsCompletedOn(DateTime.Today);
 
-        private void Touch() => EditedAt = DateTime.Now;
+        private void UpdateEditedAt() => EditedAt = DateTime.Now;
 
-        public override string ToString() =>
-            $"[{Id}] {Name} ({Status}, {HabitFrequency}) — Note: {Note}";
+        public override string ToString() => $"[{Id}] {Name} ({Status}, {HabitFrequency}) — Note: {Note}";
+
     }
 }

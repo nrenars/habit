@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
 using HabitManager;
-
 namespace TestData
 {
     public class TestDataFactoryArray : ITestDataFactory

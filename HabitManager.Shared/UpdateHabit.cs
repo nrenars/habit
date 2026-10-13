@@ -1,5 +1,3 @@
-using System;
-
 namespace HabitManager.Shared
 {
     public class UpdateHabitRequest

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HabitManager.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea9c503bd234c4f395590899766a05b080410e0d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d709b1d1b5d53d85a3d9d702c0088fc040b801f")]
 [assembly: System.Reflection.AssemblyProductAttribute("HabitManager.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HabitManager.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HabitManager.Maui.Views.HabitList"
+             Title="Habits">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <ImageButton Source="Resources/Images/plus.png" Grid.Row="0" x:Name="NewHabitButton" Text="+" HorizontalOptions="Center" Clicked="OnNewHabitClicked" />
+        
+        <CollectionView Grid.Row="1" x:Name="HabitsView" SelectionMode="Single" SelectionChanged="OnHabitSelected">
+
+            <CollectionView.ItemTemplate>
+
+                <DataTemplate>
+
+                    <VerticalStackLayout Padding="10">
+
+                        <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" />
+                        <Label Text="{Binding Note}" />
+                        <Label Text="{Binding Status}" TextColor="Gray" />
+                        <Button x:Name="CompleteHabitButton" Text="Mark As Complete" HorizontalOptions="Center" Clicked="OnHabitCompleteButton" />
+
+                    </VerticalStackLayout>
+
+                </DataTemplate>
+
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </Grid>
+
+</ContentPage>
