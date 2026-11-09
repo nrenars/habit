@@ -7,25 +7,53 @@
 
     <Grid RowDefinitions="Auto,*">
 
-        <ImageButton Source="Resources/Images/plus.png" Grid.Row="0" x:Name="NewHabitButton" Text="+" HorizontalOptions="Center" Clicked="OnNewHabitClicked" />
-        
-        <CollectionView Grid.Row="1" x:Name="HabitsView" SelectionMode="Single" SelectionChanged="OnHabitSelected">
+        <Grid Grid.Row="0" ColumnDefinitions="*,Auto" Padding="20,16,20,4">
+            <Label Text="My habits" Style="{StaticResource Title}" VerticalOptions="Center" />
+            <Button Grid.Column="1" x:Name="NewHabitButton" Text="+ New"
+                    Style="{StaticResource PrimaryButton}"
+                    HeightRequest="40" Padding="18,0" Clicked="OnNewHabitClicked" />
+        </Grid>
+
+        <CollectionView Grid.Row="1" x:Name="HabitsView"
+                        SelectionMode="Single" SelectionChanged="OnHabitSelected">
+
+            <CollectionView.EmptyView>
+                <VerticalStackLayout VerticalOptions="Center" Spacing="8" Padding="40">
+                    <Label Text="No habits yet" Style="{StaticResource CardTitle}"
+                           HorizontalOptions="Center" />
+                    <Label Text="Tap “+ New” to add your first one."
+                           Style="{StaticResource Muted}" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
 
             <CollectionView.ItemTemplate>
-
                 <DataTemplate>
+                    <Border Style="{StaticResource Card}">
+                        <VerticalStackLayout Spacing="6">
 
-                    <VerticalStackLayout Padding="10">
+                            <Label Text="{Binding Name}" Style="{StaticResource CardTitle}" />
+                            <Label Text="{Binding Note}" Style="{StaticResource Muted}" />
+                            <Label Text="{Binding ScheduledDays}" Style="{StaticResource Muted}" />
 
-                        <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" />
-                        <Label Text="{Binding Note}" />
-                        <Label Text="{Binding Status}" TextColor="Gray" />
-                        <Button x:Name="CompleteHabitButton" Text="Mark As Complete" HorizontalOptions="Center" Clicked="OnHabitCompleteButton" />
+                            <HorizontalStackLayout Spacing="8">
+                                <Border Style="{StaticResource Badge}">
+                                    <Label Text="{Binding Status}" FontSize="12"
+                                           TextColor="{StaticResource HabitGreenDark}" />
+                                </Border>
+                                <Border Style="{StaticResource Badge}" IsVisible="{Binding IsCompletedToday}">
+                                    <Label Text="✓ Done today" FontSize="12"
+                                           TextColor="{StaticResource HabitGreenDark}" />
+                                </Border>
+                            </HorizontalStackLayout>
 
-                    </VerticalStackLayout>
-
+                            <Button IsVisible="{Binding CanCompleteToday}"
+                                    Text="Mark as complete"
+                                    Style="{StaticResource PrimaryButton}"
+                                    Margin="0,6,0,0"
+                                    Clicked="OnHabitCompleteButton" />
+                        </VerticalStackLayout>
+                    </Border>
                 </DataTemplate>
-
             </CollectionView.ItemTemplate>
 
         </CollectionView>

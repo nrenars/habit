@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HabitManager.Maui.Views.WeekDayPicker">
+
+    <Grid ColumnDefinitions="*,*,*,*,*,*,*">
+        <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center">
+            <CheckBox x:Name="MonBox" HorizontalOptions="Center" />
+            <Label Text="Mon" FontSize="12" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
+            <CheckBox x:Name="TueBox" HorizontalOptions="Center" />
+            <Label Text="Tue" FontSize="12" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Column="2" HorizontalOptions="Center">
+            <CheckBox x:Name="WedBox" HorizontalOptions="Center" />
+            <Label Text="Wed" FontSize="12" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Column="3" HorizontalOptions="Center">
+            <CheckBox x:Name="ThuBox" HorizontalOptions="Center" />
+            <Label Text="Thu" FontSize="12" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Column="4" HorizontalOptions="Center">
+            <CheckBox x:Name="FriBox" HorizontalOptions="Center" />
+            <Label Text="Fri" FontSize="12" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Column="5" HorizontalOptions="Center">
+            <CheckBox x:Name="SatBox" HorizontalOptions="Center" />
+            <Label Text="Sat" FontSize="12" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Column="6" HorizontalOptions="Center">
+            <CheckBox x:Name="SunBox" HorizontalOptions="Center" />
+            <Label Text="Sun" FontSize="12" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentView>

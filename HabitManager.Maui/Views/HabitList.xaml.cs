@@ -1,43 +1,65 @@
-using TestData;
+using HabitManager.Maui.Services;
+using HabitManager.Shared;
 
 namespace HabitManager.Maui.Views;
 
 public partial class HabitList : ContentPage
 {
-	public HabitList(){
-		InitializeComponent();
+    private readonly IHabitApiClient _api;
 
-		var factory = new TestDataFactoryArray();
-		factory.CreateTestData();
-		HabitsView.ItemsSource = factory.GetTestData();
-	}
-		
-	private async void OnHabitSelected(object? sender, SelectionChangedEventArgs e){
-	    if (e.CurrentSelection.FirstOrDefault() is not Habit habit)
-		return;
+    public HabitList(IHabitApiClient api)
+    {
+        InitializeComponent();
+        _api = api;
+    }
 
-	    HabitsView.SelectedItem = null;
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        await RefreshAsync();
+    }
 
-	    await Shell.Current.GoToAsync(nameof(HabitDetails),
-		new Dictionary<string, object> { ["Habit"] = habit });
-	}
+    private async Task RefreshAsync()
+    {
+        try
+        {
+            HabitsView.ItemsSource = await _api.GetHabitsAsync();
+        }
+        catch (ApiException ex)
+        {
+            await DisplayAlertAsync("Kļūda", ex.Message, "OK");
+        }
+    }
 
-	private async void OnNewHabitClicked(object? sender, EventArgs e){
-		await Shell.Current.GoToAsync(nameof(NewHabit));
-	}
+    private async void OnHabitSelected(object? sender, SelectionChangedEventArgs e)
+    {
+        if (e.CurrentSelection.FirstOrDefault() is not HabitDto habit)
+            return;
 
-	private async void OnHabitCompleteButton(object? sender, EventArgs e)
-	{
-	    if (sender is not Button { BindingContext: Habit habit })
-		return;
+        HabitsView.SelectedItem = null;
 
-	    try
-	    {
-		habit.MarkCompleted(DateTime.Today);
-	    }
-	    catch (InvalidOperationException ex)
-	    {
-		await DisplayAlertAsync("Nevar atzīmēt", ex.Message, "OK");
-	    }
-	}
+        await Shell.Current.GoToAsync(nameof(HabitDetails),
+            new Dictionary<string, object> { ["Habit"] = habit });
+    }
+
+    private async void OnNewHabitClicked(object? sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(NewHabit));
+    }
+
+    private async void OnHabitCompleteButton(object? sender, EventArgs e)
+    {
+        if (sender is not Button { BindingContext: HabitDto habit })
+            return;
+
+        try
+        {
+            await _api.CompleteHabitAsync(habit.Id);
+            await RefreshAsync();
+        }
+        catch (ApiException ex)
+        {
+            await DisplayAlertAsync("Nevar atzīmēt", ex.Message, "OK");
+        }
+    }
 }

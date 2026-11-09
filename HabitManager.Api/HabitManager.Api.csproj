@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\HabitManager.Application\HabitManager.Application.csproj" />
+    <ProjectReference Include="..\HabitManager.Infrastructure\HabitManager.Infrastructure.csproj" />
+    <ProjectReference Include="..\HabitManager.Shared\HabitManager.Shared.csproj" />
+    <ProjectReference Include="..\HabitManager.TestData\HabitManager.TestData.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>

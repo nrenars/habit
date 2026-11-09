@@ -3,21 +3,64 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HabitManager.Maui.Views.HabitDetails"
-             Title="{Binding Name, StringFormat='Editing {0}'}">
+             Title="{Binding Name}">
 
-    <VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout Padding="16" Spacing="12">
 
-        <VerticalStackLayout Padding="20">
+            <Border Style="{StaticResource Card}" Margin="0">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="{Binding Name}" Style="{StaticResource Title}" />
+                    <Label Text="{Binding Note}" Style="{StaticResource Muted}" />
 
-            <Label Text="{Binding Name}" FontSize="24" FontAttributes="Bold" />
-            <Label Text="{Binding Note}" />
-            <Label Text="{Binding HabitFrequency}" />
-            <Label Text="{Binding Status}" />
-            <Label Text="{Binding Completions.Count, StringFormat='Izpildes: {0}'}" />
-            <ImageButton Source="Resources/Images/edit.png" Grid.Row="0" x:Name="EditHabitButton" Text="Edit" HorizontalOptions="Center" Clicked="OnEditButtonClicked" />
+                    <Border Style="{StaticResource Badge}">
+                        <Label Text="{Binding Status}" FontSize="12"
+                               TextColor="{StaticResource HabitGreenDark}" />
+                    </Border>
+                </VerticalStackLayout>
+            </Border>
+
+            <Border Style="{StaticResource Card}" Margin="0">
+                <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto" RowSpacing="12">
+
+                    <VerticalStackLayout>
+                        <Label Text="Frequency" Style="{StaticResource Muted}" />
+                        <Label Text="{Binding Frequency}" Style="{StaticResource CardTitle}" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Grid.Column="1">
+                        <Label Text="Total completions" Style="{StaticResource Muted}" />
+                        <Label Text="{Binding CompletionCount}" Style="{StaticResource CardTitle}" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Grid.Row="1">
+                        <Label Text="Completed today" Style="{StaticResource Muted}" />
+                        <Label Text="{Binding IsCompletedToday}" Style="{StaticResource CardTitle}" />
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Grid.Row="1" Grid.Column="1">
+                        <Label Text="Days" Style="{StaticResource Muted}" />
+                        <Label Text="{Binding ScheduledDays}" Style="{StaticResource CardTitle}" />
+                    </VerticalStackLayout>
+
+                    <Label Grid.Row="2" Grid.ColumnSpan="2" IsVisible="{Binding CanEdit}"
+                           Text="{Binding EditedAt, StringFormat='Edited at: {0}'}"
+                           Style="{StaticResource Muted}" />
+
+                    <Label Grid.Row="2" Grid.ColumnSpan="2" IsVisible="{Binding IsArchived}"
+                           Text="{Binding EditedAt, StringFormat='Archived at: {0}'}"
+                           Style="{StaticResource Muted}" />
+                </Grid>
+            </Border>
+
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="12" IsVisible="{Binding CanEdit}">
+                <Button x:Name="EditHabitButton" Text="Edit"
+                        Style="{StaticResource OutlineButton}" Clicked="OnEditButtonClicked" />
+                <Button x:Name="ArchiveHabitButton" Grid.Column="1" Text="Archive"
+                        Style="{StaticResource DangerOutlineButton}" Clicked="OnArchiveButtonClicked" />
+            </Grid>
 
         </VerticalStackLayout>
-
-    </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>

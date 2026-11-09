@@ -3,12 +3,44 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HabitManager.Maui.Views.CompletedHabitList"
-             Title="CompletedHabitList">
+             Title="Completed">
 
-    <VerticalStackLayout>
+    <Grid RowDefinitions="Auto,*">
 
-        <Label Text="Welcome to .NET MAUI!" VerticalOptions="Center"  HorizontalOptions="Center" />
+        <Label Grid.Row="0" Text="Completed today" Style="{StaticResource Title}"
+               Margin="20,16,20,4" />
 
-    </VerticalStackLayout>
+        <CollectionView Grid.Row="1" x:Name="CompletedView" SelectionMode="None">
+
+            <CollectionView.EmptyView>
+                <VerticalStackLayout VerticalOptions="Center" Spacing="8" Padding="40">
+                    <Label Text="Nothing completed today" Style="{StaticResource CardTitle}"
+                           HorizontalOptions="Center" />
+                    <Label Text="Mark a habit as complete and it will show up here."
+                           Style="{StaticResource Muted}" HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Style="{StaticResource Card}">
+                        <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
+                            <VerticalStackLayout Spacing="4">
+                                <Label Text="{Binding Name}" Style="{StaticResource CardTitle}" />
+                                <Label Text="{Binding Note}" Style="{StaticResource Muted}" />
+                            </VerticalStackLayout>
+                            <Border Grid.Column="1" Style="{StaticResource Badge}" VerticalOptions="Center">
+                                <Label Text="✓ Done" FontSize="12"
+                                       TextColor="{StaticResource HabitGreenDark}" />
+                            </Border>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </Grid>
 
 </ContentPage>

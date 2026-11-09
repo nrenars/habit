@@ -410,4 +410,86 @@
         <Setter Property="SelectedTabColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
     </Style>
 
+    <Color x:Key="HabitGreen">#2E9E5B</Color>
+    <Color x:Key="HabitGreenDark">#1F7A44</Color>
+    <Color x:Key="HabitDanger">#D64545</Color>
+
+    <Style x:Key="Card" TargetType="Border">
+        <Setter Property="StrokeShape" Value="RoundRectangle 16" />
+        <Setter Property="Padding" Value="16" />
+        <Setter Property="Margin" Value="16,6" />
+        <Setter Property="StrokeThickness" Value="1" />
+        <Setter Property="Stroke" Value="{AppThemeBinding Light=#DDE3E0, Dark=#2C3531}" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=#FFFFFF, Dark=#1B211E}" />
+    </Style>
+
+    <Style x:Key="Title" TargetType="Label">
+        <Setter Property="FontSize" Value="26" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light=#1A1F1C, Dark=#F1F4F2}" />
+    </Style>
+
+    <Style x:Key="CardTitle" TargetType="Label">
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light=#1A1F1C, Dark=#F1F4F2}" />
+    </Style>
+
+    <Style x:Key="Muted" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light=#6B746F, Dark=#9AA5A0}" />
+    </Style>
+
+    <Style x:Key="FieldLabel" TargetType="Label" BasedOn="{StaticResource Muted}">
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="Margin" Value="4,12,0,4" />
+    </Style>
+
+    <Style x:Key="SectionHeader" TargetType="Label">
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="Margin" Value="20,16,20,4" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light=#1A1F1C, Dark=#F1F4F2}" />
+    </Style>
+
+    <Style x:Key="Badge" TargetType="Border">
+        <Setter Property="StrokeShape" Value="RoundRectangle 20" />
+        <Setter Property="StrokeThickness" Value="0" />
+        <Setter Property="Padding" Value="10,4" />
+        <Setter Property="HorizontalOptions" Value="Start" />
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=#DFF3E7, Dark=#1E3A2A}" />
+    </Style>
+
+    <Style x:Key="PrimaryButton" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource HabitGreen}" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="CornerRadius" Value="12" />
+        <Setter Property="HeightRequest" Value="48" />
+    </Style>
+
+    <Style x:Key="OutlineButton" TargetType="Button" BasedOn="{StaticResource PrimaryButton}">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="BorderWidth" Value="1.5" />
+        <Setter Property="BorderColor" Value="{StaticResource HabitGreen}" />
+        <Setter Property="TextColor" Value="{StaticResource HabitGreen}" />
+    </Style>
+
+    <Style x:Key="DangerOutlineButton" TargetType="Button" BasedOn="{StaticResource OutlineButton}">
+        <Setter Property="BorderColor" Value="{StaticResource HabitDanger}" />
+        <Setter Property="TextColor" Value="{StaticResource HabitDanger}" />
+    </Style>
+
+    <Style x:Key="FormEntry" TargetType="Entry">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="HeightRequest" Value="48" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light=#1A1F1C, Dark=#F1F4F2}" />
+        <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light=#6B746F, Dark=#9AA5A0}" />
+    </Style>
+
+    <Style x:Key="FormPicker" TargetType="Picker">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light=#1A1F1C, Dark=#F1F4F2}" />
+        <Setter Property="TitleColor" Value="{AppThemeBinding Light=#6B746F, Dark=#9AA5A0}" />
+    </Style>
 </ResourceDictionary>

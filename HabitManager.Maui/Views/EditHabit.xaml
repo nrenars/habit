@@ -2,17 +2,37 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:HabitManager.Maui.Views"
              x:Class="HabitManager.Maui.Views.EditHabit"
-             Title="{Binding Name}">
+             Title="Edit habit">
 
-    <VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="4">
 
-        <Entry Text="{Binding Name}" />
-        <Entry Text="{Binding Note}" />
-        <Entry Text="{Binding HabitFrequency}" />
+            <Label Text="Name" Style="{StaticResource FieldLabel}" />
+            <Entry x:Name="NameEntry" Style="{StaticResource FormEntry}" Placeholder="Habit name" />
 
-        <Button Grid.Row="0" x:Name="SaveChangesButton" Text="Save" HorizontalOptions="Center" Clicked="OnSaveButtonClicked" />
+            <Label Text="Note" Style="{StaticResource FieldLabel}" />
+            <Entry x:Name="NoteEntry" Style="{StaticResource FormEntry}" Placeholder="Optional" />
 
-    </VerticalStackLayout>
+            <Label Text="Frequency" Style="{StaticResource FieldLabel}" />
+            <Picker x:Name="FrequencyPicker" Style="{StaticResource FormPicker}" Title="Choose frequency">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Daily</x:String>
+                        <x:String>Weekly</x:String>
+                        <x:String>Monthly</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Days" Style="{StaticResource FieldLabel}" />
+            <views:WeekDayPicker x:Name="DaysPicker" />
+
+            <Button Text="Save" Style="{StaticResource PrimaryButton}"
+                    Margin="0,24,0,0" Clicked="OnSaveButtonClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>

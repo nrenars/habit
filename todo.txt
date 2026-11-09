@@ -1,0 +1,4 @@
+bool completed today nestrada - parada mark as complete jau completed habitiem
+
+Complete view - % un cik no cik taskiem sodien izpilditi + completion history spodien un overall
+pievienojot new habit uzreiz tas radas ari completed view
