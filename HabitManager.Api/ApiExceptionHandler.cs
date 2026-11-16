@@ -17,7 +17,7 @@ public class ApiExceptionHandler(IProblemDetailsService problemDetails) : IExcep
             _ => (0, "")
         };
 
-        if (status == 0) return false;   // neparedzēta kļūda -> 500
+        if (status == 0) return false;   
 
         context.Response.StatusCode = status;
         return await problemDetails.TryWriteAsync(new ProblemDetailsContext

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HabitManager.TestData")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0737bd359255367d5085fd57ee50d51998e4a0f0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8fbd7eb7e3bdb0e1dd2df5b6e8898a180676c141")]
 [assembly: System.Reflection.AssemblyProductAttribute("HabitManager.TestData")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HabitManager.TestData")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

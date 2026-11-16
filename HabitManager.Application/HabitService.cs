@@ -2,8 +2,10 @@ using HabitManager.Shared;
 
 namespace HabitManager.Application;
 
-public class HabitService(IHabitRepository repository)
+public class HabitService(IHabitRepository repository, TimeProvider? timeProvider = null)
 {
+    private readonly TimeProvider _time = timeProvider ?? TimeProvider.System;
+
     public async Task<IReadOnlyList<HabitDto>> GetAllAsync(string userId, bool includeArchived = false)
     {
         var habits = await repository.GetByUserAsync(userId);
@@ -47,9 +49,11 @@ public class HabitService(IHabitRepository repository)
     public async Task<HabitCompletionDto> CompleteAsync(string userId, Guid id, DateTime? date)
     {
         var habit = await GetOwnedAsync(userId, id);
-        var day = (date ?? DateTime.Today).Date;
 
-        if (day > DateTime.Today)
+        var today = _time.GetLocalNow().Date;
+        var day = (date ?? today).Date;
+
+        if (day > today)
             throw new ArgumentException("Izpildi nevar atzīmēt nākotnes datumam.");
 
         var completion = habit.MarkCompleted(day);
@@ -66,7 +70,6 @@ public class HabitService(IHabitRepository repository)
             .ToList();
     }
 
-    // cita lietotāja ieradumu atgriež kā "nav atrasts", lai neatklātu, ka tāds eksistē
     private async Task<Habit> GetOwnedAsync(string userId, Guid id)
     {
         var habit = await repository.GetByIdAsync(id);

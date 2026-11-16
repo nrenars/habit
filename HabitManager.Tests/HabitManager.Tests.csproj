@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+    <PackageReference Include="coverlet.collector" Version="6.0.2" />
+    <PackageReference Include="Moq" Version="4.20.72" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HabitManager.Domain\HabitManager.Domain.csproj" />
+    <ProjectReference Include="..\HabitManager.Shared\HabitManager.Shared.csproj" />
+    <ProjectReference Include="..\HabitManager.Application\HabitManager.Application.csproj" />
+    <ProjectReference Include="..\HabitManager.TestData\HabitManager.TestData.csproj" />
+  </ItemGroup>
+
+  <!-- API klients dzīvo Maui projektā (multi-target), tāpēc testiem tiek pievienots tikai šis avota fails -->
+  <ItemGroup>
+    <Compile Include="..\HabitManager.Maui\Services\HabitApiClient.cs" Link="Linked\HabitApiClient.cs" />
+  </ItemGroup>
+
+</Project>

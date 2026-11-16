@@ -2,7 +2,6 @@ using System.Text.Json.Serialization;
 using HabitManager.Api;
 using HabitManager.Application;
 using HabitManager.Infrastructure;
-using TestData;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,15 +11,15 @@ builder.Services.ConfigureHttpJsonOptions(options =>
 builder.Services.AddProblemDetails();
 builder.Services.AddExceptionHandler<ApiExceptionHandler>();
 
-builder.Services.AddSingleton<IHabitRepository>(_ =>
-{
-    var factory = new TestDataFactoryList();
-    factory.CreateTestData();
-    return new InMemoryHabitRepository(factory.GetTestData());
-});
+var connectionString = builder.Configuration.GetConnectionString("Habits")
+    ?? $"Data Source={Path.Combine(builder.Environment.ContentRootPath, "habits.db")}";
+
+builder.Services.AddInfrastructure(connectionString);
 builder.Services.AddScoped<HabitService>();
 
 var app = builder.Build();
+
+await app.InitializeDatabaseAsync();
 
 app.Use(async (context, next) =>
 {
