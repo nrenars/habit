@@ -1,0 +1,8 @@
+/Users/renarsneimanis/Documents/github/habit/HabitManager.Tests/bin/Debug/net10.0/.msCoverageSourceRootsMapping_HabitManager.Tests
+/Users/renarsneimanis/Documents/github/habit/HabitManager.Tests/bin/Debug/net10.0/CoverletSourceRootsMapping_HabitManager.Tests
+/Users/renarsneimanis/Documents/github/habit/HabitManager.Tests/obj/Debug/net10.0/HabitManager.Tests.csproj.AssemblyReference.cache
+/Users/renarsneimanis/Documents/github/habit/HabitManager.Tests/obj/Debug/net10.0/HabitManager.Tests.GeneratedMSBuildEditorConfig.editorconfig
+/Users/renarsneimanis/Documents/github/habit/HabitManager.Tests/obj/Debug/net10.0/HabitManager.Tests.AssemblyInfoInputs.cache
+/Users/renarsneimanis/Documents/github/habit/HabitManager.Tests/obj/Debug/net10.0/HabitManager.Tests.AssemblyInfo.cs
+/Users/renarsneimanis/Documents/github/habit/HabitManager.Tests/obj/Debug/net10.0/HabitManager.Tests.csproj.CoreCompileInputs.cache
+/Users/renarsneimanis/Documents/github/habit/HabitManager.Tests/obj/Debug/net10.0/HabitManager.Tests.sourcelink.json
